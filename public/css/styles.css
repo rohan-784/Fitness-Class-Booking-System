@@ -1,0 +1,80 @@
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #f2f2f2;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Hero Styles */
+.hero {
+    background-image: url("hero-image.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    padding: 0.8rem 1.5rem;
+    background-color: #ff7f50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.cta-button:hover {
+    background-color: #ff6347;
+}
+
+/* About Section Styles */
+.about {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    margin-bottom: 1rem;
+}
