@@ -4,6 +4,11 @@
 /* #Primary
 ================================================== */
 
+
+html {
+	scroll-behavior: smooth;
+}
+
 *{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -172,7 +177,7 @@ h6{
 ================================================== */
 
 #background{
-	background-image: url('https://source.unsplash.com/1638x977/?yoga');
+	background-image: url('../images/1.jpg');
 	background-position: center;
 	background-repeat:no-repeat;
 	
@@ -331,7 +336,7 @@ h1 span:nth-child(6){
 
 .dark{
 	color: #fff;
-	background-color: #1f2029;
+	/* background-color: #1f2029; */
 }
 .dark .navbar-brand img{
   filter: brightness(100%);
@@ -355,7 +360,7 @@ h1 span:nth-child(6){
 .dark .start-header.scroll-on {
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
 }
-.dark .nav-link{
+.dark .nav-link {
 	color: #fff !important;
 }
 .dark .nav-item.active .nav-link{
@@ -372,11 +377,19 @@ h1 span:nth-child(6){
 .dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	border-color: transparent;
 }
+.dark .main-heading{
+	color:#263d58;
+}
+.dark .counter{
+	color:#ffacb5;
+}
+
+.dark .footer{
+	background-color: #000;
+}
 
 .about {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -ms-flexbox;
+	
 	display: flex;
 	width: 100%;
 	height: auto;
@@ -385,29 +398,24 @@ h1 span:nth-child(6){
 	margin-bottom: 0px;
 	padding-top: 100px;
 	padding-bottom: 100px;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
+	
 	flex-direction: column;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
+	
 	justify-content: center;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	-ms-flex-align: center;
+	
 	align-items: center;
 	background-color: #fff;
 }
 
 
 .main-heading {
-font-family: Gotham, sans-serif;
-color: #263d58;
-font-size: 40px;
-line-height: 69px;
-font-weight: 400;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-family: Gotham, sans-serif;
+	color: #263d58;
+	font-size: 40px;
+	line-height: 69px;
+	font-weight: 400;
 }
 
 .main-text {
@@ -844,21 +852,13 @@ html.w-mod-touch * {
     width: 100%;
     padding-top: 60px;
     padding-bottom: 40px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
+    
     flex-direction: column;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
+    
     justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
+    
     align-items: center;
     background-color: #263d58;
-    color: #263d58;
     text-align: center;
 }
 

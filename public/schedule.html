@@ -4,14 +4,196 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fitness Class Schedule</title>
-  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
   <h1>Fitness Class Schedule</h1>
   <div id="class-schedule">
-    <!-- Class schedule content will be dynamically generated -->
+    
+  </div>
+
+
+  
+  <div class="class-details">
+    <h2>Class Details</h2>
+    <p class="main-text grey">
+      Get in shape and feel great with our fitness class schedule. We offer a variety of classes tailored to your fitness level and goals. Our experienced instructors will guide you every step of the way.
+      Cardio workouts are a great way to burn calories and strengthen your heart. Our classes include running, cycling, and dance-based workouts.
+      Build muscle and increase your strength with our weight training classes. We offer a variety of techniques to work on your specific areas.
+      Increase flexibility, balance, and mental clarity with our yoga classes. We offer both traditional and modern techniques to fit your preferences.
+      Get in top shape and learn the skills of self-defense with our combat-based classes. We offer boxing, kickboxing, and martial arts training.
+    </p>
+    
+    <div class="w-layout-grid service-grid">
+      <div class="service-card">
+        <div class="w-layout-grid service-card-grid">
+          <div class="yoga">
+            <div class="service-heading-block">
+              <h4 class="service-heading">Yoga Class</h4>
+            </div>
+              <div id="w-node-f3d0a952-8538-d0dd-5064-fcb7c3fc2888-a471d000" class="service-text-block">
+                <p class="paragraph">
+                  Instructor: John Doe <br>
+                  Time: 10:00 am<br>
+                  Duration: 60 minutes<br>
+                  <!-- Location: 123 Main SQuare, Guwahati, Assam<br> -->
+                  Cost: Rs 200<br>
+                  Availability: 10/50 spots left<br>
+                </p>
+              </div>
+              <div class="button-block">
+                <button class="button-3 w-button">Book Now</button>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="w-layout-grid service-card-grid">
+          <div class="weight">
+            <div class="service-heading-block">
+              <h4 class="service-heading">Weight Training Class</h4>
+            </div>
+            <div id="w-node-f3d0a952-8538-d0dd-5064-fcb7c3fc2888-a471d000" class="service-text-block">
+              <p class="paragraph">
+                Instructor: Mike Johnson<br>
+                Time: 10:00 am<br>
+                Duration: 60 minutes<br>
+                <!-- Location: 123 Main SQuare, Guwahati, Assam<br> -->
+                Cost: Rs 200<br>
+                Availability: 10/50 spots left<br>
+              </p>
+            </div>
+            <div class="button-block">
+              <button class="button-3 w-button">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="w-layout-grid service-card-grid">
+          <div class="cardio">
+            <div class="service-heading-block">
+              <h4 class="service-heading">Cardio class</h4>
+            </div>
+            <div class="service-text-block">
+              <p class="paragraph">
+                Instructor: Jane Smith<br>
+                Time: 10:00 am<br>
+                Duration: 60 minutes<br>
+                <!-- Location: 123 Main SQuare, Guwahati, Assam<br> -->
+                Cost: Rs 200<br>
+                Availability: 10/50 spots left<br>
+              </p>
+            </div>
+            <div class="button-block">
+              <button class="button-3 w-button">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <h1>Your Schedule</h1>
+  <button id="viewScheduleBtn">View Schedule</button>
+  <div class="calendar" id="calendarContainer" style="display: none;">
+    <!-- Calendar will be dynamically generated here -->
+  </div>
+
+  <!-- Class Filters -->
+  <div class="filters">
+    <label for="classType">Class Type:</label>
+    <input type="radio" id="yogaRadio" name="classType" value="Yoga">
+    <label for="yogaRadio">Yoga</label>
+    <input type="radio" id="cardioRadio" name="classType" value="Cardio">
+    <label for="cardioRadio">Cardio</label>
+    <input type="radio" id="weightTrainingRadio" name="classType" value="Weight Training">
+    <label for="weightTrainingRadio">Weight Training</label>
+
+    <label for="instructor">Instructor:</label>
+    <select id="instructorDropdown">
+      <option value="all">All Instructors</option>
+      <option value="John Doe">John Doe</option>
+      <option value="Jane Smith">Jane Smith</option>
+      <!-- Add more instructors here if needed -->
+    </select>
+
+    <label for="day">Preferred Day:</label>
+    <select id="dayDropdown">
+      <option value="all">Any Day</option>
+      <option value="Monday">Monday</option>
+      <option value="Tuesday">Tuesday</option>
+      <option value="Wednesday">Wednesday</option>
+      <option value="Thursday">Thursday</option>
+      <option value="Friday">Friday</option>
+      <option value="Saturday">Saturday</option>
+      <option value="Sunday">Sunday</option>
+    </select>
+
+    <label for="time">Preferred Time:</label>
+    <input type="time" id="timeInput">
+
+    <label for="preferredDate">Select Date:</label>
+    <input type="date" id="preferredDate">
+
+    <div class="button-block">
+      <button class="button-3 w-button" id="searchButton">Search</button>
+    </div>
+    <div class="button-block">
+      <button class="button-3 w-button" id="clearFiltersButton">Clear Filters</button>
+    </div>
+  </div>
+
+  
+  <div id="waitlistContainer" style="display: none;">
+    <h2>Waitlist</h2>
+    <p>Join the waitlist for the class:</p>
+    <p><span id="waitlistClassName"></span> with <span id="waitlistInstructor"></span></p>
+    <div class="button-block">
+      <button class="button-3 w-button" id="joinWaitlistBtn">Join Waitlist</button>
+    </div>
   </div>
   
-  <script src="src/script.js"></script>
+  <!-- Reviews and Ratings Section -->
+  <div class="reviews">
+    <h2>Reviews and Ratings</h2>
+    <div class="review-form">
+      <input type="text" id="classNameInput" placeholder="Class Name">
+      <input type="number" id="ratingInput" min="1" max="5" placeholder="Rating (1-5)">
+      <textarea id="reviewTextInput" placeholder="Your Review"></textarea>
+      <button id="submitReviewBtn">Submit Review</button>
+    </div>
+    <div class="review-list">
+      <!-- Reviews will be dynamically generated here -->
+    </div>
+  </div>
+
+  <!-- Contact Information Section -->
+  <div class="contact-info">
+    <h2>Contact Information</h2>
+    <p>If you have any questions or need assistance, please contact us:</p>
+    <ul>
+      <li>Email: support@fitnessclass.com</li>
+      <li>Phone: +91 8178 945925</li>
+      <!-- Add more contact information if needed -->
+    </ul>
+    <p>Alternatively, you can use the form below:</p>
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="../src/script.js"></script>
 </body>
-</html>
+</html> 
+
+
