@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // For this example, we'll just display the review on the page
     const reviewItem = document.createElement('div');
     reviewItem.classList.add('review-item');
-    reviewItem.innerHTML = `<strong>${className}</strong> - Rating: ${rating}<br>${reviewText}`;
+    reviewItem.innerHTML = `<h2 class="hew">${className}</h2>  <h4 class="rew">${rating} star</h4> <textarea class="main-para red" style="/* width: 824px; */height: 340px;">${reviewText}</textarea>`;
     document.querySelector('.review-list').appendChild(reviewItem);
 
     // Clear the form fields after submission
@@ -380,22 +380,79 @@ document.addEventListener('DOMContentLoaded', function () {
   const submitReviewBtn = document.getElementById('submitReviewBtn');
   submitReviewBtn.addEventListener('click', submitReview);
 
-  // Rest of the code (generateCalendar function and sample data) remains the same
 
 
+ 
 
-  function handleContactFormSubmit(event) {
-    event.preventDefault();
+  
 
-    // Here you can implement the logic to handle the contact form submission
-    // For this example, we'll just display a success message
+
+  const submitBtn = document.getElementById('submitBtn');
+  const form = document.getElementById('contactForm');
+
+  submitBtn.addEventListener('click', function (event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Get form input values
     const name = document.getElementById('name').value;
-    alert(`Thank you, ${name}! Your message has been received.`);
-    document.getElementById('contactForm').reset();
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Validate form input (add your own validation logic as needed)
+    if (!name || !email || !message) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    // Simulate form submission (you can replace this with your actual form submission logic)
+    // For this example, we'll display a confirmation message
+    showConfirmationMessage();
+
+    // Clear form fields after submission
+    clearFormFields();
+  });
+
+  // Function to show a confirmation message
+  function showConfirmationMessage() {
+    const confirmationMessage = document.createElement('div');
+    confirmationMessage.classList.add('confirmation-message');
+    confirmationMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+
+    // Append the confirmation message after the form
+    form.appendChild(confirmationMessage);
+
+    // Hide the confirmation message after 5 seconds (adjust the time as needed)
+    setTimeout(() => {
+      confirmationMessage.style.display = 'none';
+    }, 5000);
   }
 
-  // Attach event listener to the contact form
-  const contactForm = document.getElementById('contactForm');
-  contactForm.addEventListener('submit', handleContactFormSubmit);
+  // Function to clear form fields after submission
+  function clearFormFields() {
+    const formFields = form.querySelectorAll('input, textarea');
+    formFields.forEach((field) => {
+      field.value = '';
+    });
+  }
 
+
+
+
+  // // Function to handle contact form submission
+  // function handleContactFormSubmit(event) {
+  //   event.preventDefault();
+
+  //   // Here you can implement the logic to handle the contact form submission
+  //   // For this example, we'll just display a success message
+  //   const name = document.getElementById('name').value;
+  //   alert(`Thank you, ${name}! Your message has been received.`);
+  //   document.getElementById('contactForm').reset();
+  // }
+
+  // // Attach event listener to the contact form
+  // const contactForm = document.getElementById('contactForm');
+  // contactForm.addEventListener('submit', handleContactFormSubmit);
+
+  
 });
+

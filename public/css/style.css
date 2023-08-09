@@ -451,6 +451,42 @@ color: #263d58;
 }
 
 
+
+
+
+.main-text {
+font-family: 'Gotham book', sans-serif;
+color: #fff;
+font-size: 16px;
+line-height: 22px;
+}
+
+.main-text.grey {
+width: 82%;
+padding-left: 0px;
+color: #acacac;
+font-size: 15px;
+line-height: 25px;
+white-space: normal;
+}
+
+
+
+.main-text.grey.left-align {
+width: 100%;
+font-weight: 400;
+text-align: left;
+}
+
+.main-text.grey.full-width {
+width: 100%;
+}
+
+.main-text.blue {
+color: #263d58;
+}
+
+
 .about-grid {
 	display: block;
     padding-top: 50px;
@@ -965,6 +1001,7 @@ ul{
 
 .footer-link.w--current {
     padding-right: 19px;
+	text-decoration: none;
 }
 
 .footer-link {
@@ -981,7 +1018,12 @@ ul{
     line-height: 21px;
     font-weight: 500;
     text-align: left;
+    
+}
+
+.footer-link:hover {
     text-decoration: none;
+    
 }
 
 .field-label-3 {
@@ -1012,7 +1054,7 @@ label {
 .sas-input{
     display: block;
     /* width: 100%; */
-    height: 38px;
+    height: 43px;
     padding: 8px 12px;
     margin-bottom: 10px;
     font-size: 14px;
@@ -1088,22 +1130,7 @@ img {
     display: inline-block;
 }
 
-.footer-link {
-    display: block;
-    width: auto;
-    margin-bottom: 10px;
-    padding-right: 10px;
-    padding-left: 0px;
-    -webkit-transition: all 200ms ease;
-    transition: all 200ms ease;
-    font-family: Gotham, sans-serif;
-    color: #fff;
-    font-size: 15px;
-    line-height: 21px;
-    font-weight: 500;
-    text-align: left;
-    text-decoration: none;
-} 
+
 
 
 
